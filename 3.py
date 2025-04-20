@@ -10,7 +10,7 @@ password = str(''.join(random.sample(string.ascii_letters + string.digits + stri
 print(name, surname, age, email, password)
 json_object = {'name': name + ' ' + surname, 'age': age, 'email': email, 'password': password}
 with open('C:\\Users\\tim\\Desktop\\json.txt', 'w') as file:
-    json.dump(json_object, file)
+    json.dump(json_object, file, indent = 4)
     file.close()
 with open('C:\\Users\\tim\\Desktop\\json.txt', 'r') as file:
     print(file.read())
